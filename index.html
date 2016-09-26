@@ -1,0 +1,63 @@
+
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <title>Ruth Gendro Resume</title>
+    <link href='https://fonts.googleapis.com/css?family=Noto+Sans' rel='stylesheet' type='text/css'>
+    <link href="css/app.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="js/helper.js"></script>
+    <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?libraries=places"></script>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+</head>
+
+<body>
+    <div id="main">
+        <div id="header" class="center-content clear-fix">
+        </div>
+        <div id="projects">
+            <h2>Projects</h2>
+        </div>
+        <div id="education" class="gray">
+            <h2>Education</h2>
+        </div>
+        <div id="workExperience" class="gray">
+            <h2>Work Experience</h2>
+        </div>
+        <div id="locations">
+            <h2>Where I've Lived and Worked</h2>
+        </div>
+        <div id="lets-connect" class="dark-gray">
+            <h2 class="light-blue center-text">Let's Connect</h2>
+            <ul class="center-content" id="footer-contacts">
+            </ul>
+        </div>
+    </div>
+    <script src="js/resumeBuilder.js"></script>
+    <script type="text/javascript">
+    if (document.getElementsByClassName("flex-item").length === 0) {
+        document.getElementById("top-contacts").style.backgroundColor = "skyblue";
+    }
+    if (document.getElementsByTagName("h1").length === 0) {
+        document.getElementById("header").style.backgroundColor = "skyblue";
+    }
+    if (document.getElementsByClassName("work-entry").length === 0) {
+        document.getElementById("workExperience").style.backgroundColor = "skyblue";
+    }
+    if (document.getElementsByClassName("project-entry").length === 0) {
+        document.getElementById("projects").style.backgroundColor = "skyblue";
+    }
+    if (document.getElementsByClassName("education-entry").length === 0) {
+        document.getElementById("education").style.backgroundColor = "skyblue";
+    }
+    if (document.getElementsByClassName("flex-item").length === 0) {
+        document.getElementById("lets-connect").style.backgroundColor = "skyblue";
+    }
+    if (document.getElementById("map") === null) {
+        document.getElementById("mapDiv").style.backgroundColor = "skyblue";
+    }
+    header
+    </script>
+</body>
+
+</html>
