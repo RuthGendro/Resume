@@ -10,7 +10,7 @@ var HTMLportfolio = '<li class="contact flex-item"><span class="contact-type">Po
 var HTMLgithub = '<li class="contact flex-item"><span class="contact-type">GitHub</span><span class="white-text"><a href="%link%" target="_blank">%data%</a></span></li>';
 var HTMLlocation = '<li class="contact flex-item"><span class="contact-type">Location</span><span class="white-text"><a href="%link%" target="_blank">%data%</span></li>';
 
-var HTMLbioPic = '<img class="biopic" id="%id%" src="%data%">';
+var HTMLbiopic = '<img class="biopic" id="%id%" src="%data%">';
 var HTMLwelcomeMsg = '<span class="welcome-message">%data%</span>';
 var HTMLwelcomeBullet = '<li class="welcome-bullet">%data%</li>';
 

@@ -3,11 +3,11 @@ Finish customizing CSS
 */
 
 var bio = {
-    "bioPic": "images/me.jpg",
+    "biopic": "images/me.jpg",
     "name": "Ruth Gendro",
     "role": "Web Developer",
-    "welcomeBullet1": "Having spent about a year learning web development, I am confident in my ability to progessively learn more",
-    "welcomeBullet2": "Eager to expand my skill set and continue learning",
+    "welcomeMessage": "Having spent about a year learning web development, I am confident in my ability to progessively learn more",
+    "welcomeMessage2": "Eager to expand my skill set and continue learning",
     "contacts": {
         "mobile": "425-894-5116",
         "mobileLink": "tel:425-894-5116",
@@ -22,8 +22,7 @@ var bio = {
         "location": "Seattle, WA",
         "locationURL": "https://www.google.com/maps/place/Seattle,+WA/@47.6149943,-122.4759913,11z/data=!3m1!4b1!4m5!3m4!1s0x5490102c93e83355:0x102565466944d59a!8m2!3d47.6062095!4d-122.3320708"
     },
-
-    "languages": ["JavaScript", "HTML", "CSS", "PHP (beginner-level)", "Ruby (beginner)"],
+    "skills": ["JavaScript", "HTML", "CSS", "PHP (beginner-level)", "Ruby (beginner)"],
     "frameworks_libraries": ["Angular JS", "Bootstrap / Responsive Design", "jQuery", "Jasmine"],
     "other_tools": ["Chrome DevTools", "Git", "GitHub", "PhotoShop", "Grunt (learning)", "Gulp (learning)"],
     "pdfResumeURL": "", // add google drive doc
@@ -39,11 +38,11 @@ var bio = {
         var formattedPortfolio = HTMLportfolio.replace("%data%", bio.contacts.portfolio).replace("%link%", bio.contacts.portfolioURL);
         var formattedGitHub = HTMLgithub.replace("%data%", bio.contacts.github).replace("%link%", bio.contacts.githubURL);
         var formattedLocation = HTMLlocation.replace("%data%", bio.contacts.location).replace("%link%", bio.contacts.locationURL);
-        var formattedBioPicBig = HTMLbioPic.replace("%data%", "images/me.jpg").replace("%id%", "biopic-big");
-        var formattedBioPicSmall = HTMLbioPic.replace("%data%", "images/me.jpg").replace("%id%", "biopic-small");
+        var formattedBioPicBig = HTMLbiopic.replace("%data%", "images/me.jpg").replace("%id%", "biopic-big");
+        var formattedBioPicSmall = HTMLbiopic.replace("%data%", "images/me.jpg").replace("%id%", "biopic-small");
         var formattedWelcomeMsg = HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage);
-        var formattedWelcomeBullet1 = HTMLwelcomeBullet.replace("%data%", bio.welcomeBullet1);
-        var formattedWelcomeBullet2 = HTMLwelcomeBullet.replace("%data%", bio.welcomeBullet2);
+        var formattedWelcomeBullet1 = HTMLwelcomeBullet.replace("%data%", bio.welcomeMessage);
+        var formattedWelcomeBullet2 = HTMLwelcomeBullet.replace("%data%", bio.welcomeMessage2);
         var formattedWordResumeLink = HTMLresumeLink.replace("%data%", "Resume Microsoft Word Format").replace("%link%", bio.wordResumeURL);
         var formattedPDFResumeLink = HTMLresumeLink.replace("%data%", "Resume PDF Format").replace("%link%", bio.pdfResumeURL);
 
@@ -76,12 +75,12 @@ var bio = {
         $("#header").append('<div id="skills-container"></div>');
 
 
-        if (bio.languages.length > 0) {
+        if (bio.skills.length > 0) {
             var skillsStart = HTMLskillsStart.replace("%data%", "Programming Languages").replace("%id%", "skills-languages");
             $("#skills-container").append(skillsStart);
             var formattedSkill = null;
-            for (var i = 0; i < bio.languages.length; i++) {
-                formattedSkill = HTMLskills.replace("%data%", bio.languages[i]);
+            for (var i = 0; i < bio.skills.length; i++) {
+                formattedSkill = HTMLskills.replace("%data%", bio.skills[i]);
                 $("#skills-languages").append(formattedSkill);
             }
         }
