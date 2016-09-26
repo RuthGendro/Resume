@@ -86,20 +86,20 @@ var bio = {
         }
 
         if (bio.frameworks_libraries.length > 0) {
-            var skillsStart = HTMLskillsStart.replace("%data%", "Frameworks/Libraries").replace("%id%", "skills-fw-lib");
+            skillsStart = HTMLskillsStart.replace("%data%", "Frameworks/Libraries").replace("%id%", "skills-fw-lib");
             $("#skills-container").append(skillsStart);
-            var formattedSkill = null;
-            for (var i = 0; i < bio.frameworks_libraries.length; i++) {
+            formattedSkill = null;
+            for (i = 0; i < bio.frameworks_libraries.length; i++) {
                 formattedSkill = HTMLskills.replace("%data%", bio.frameworks_libraries[i]);
                 $("#skills-fw-lib").append(formattedSkill);
             }
         }
 
         if (bio.other_tools.length > 0) {
-            var skillsStart = HTMLskillsStart.replace("%data%", "Other Tools").replace("%id%", "skills-other");
+            skillsStart = HTMLskillsStart.replace("%data%", "Other Tools").replace("%id%", "skills-other");
             $("#skills-container").append(skillsStart);
-            var formattedSkill = null;
-            for (var i = 0; i < bio.other_tools.length; i++) {
+            formattedSkill = null;
+            for (i = 0; i < bio.other_tools.length; i++) {
                 formattedSkill = HTMLskills.replace("%data%", bio.other_tools[i]);
                 $("#skills-other").append(formattedSkill);
             }
@@ -114,6 +114,7 @@ var bio = {
         $("#mapDiv").append(googleMap);
     }
 };
+
 
 
 var projects = {
@@ -136,33 +137,31 @@ var projects = {
 			"url": "https://ruthgendro.github.io/index.html",
             "demoLink": "https://ruthgendro.github.io/index.html"
 		}
-	],
-    display: function() {
-        $("#projects").append(HTMLprojectStart);
+	]
+};
 
-        for (var project in projects.projects) {
 
-            var formattedProjectTitle = HTMLprojectTitle.replace("%data%",
-                projects.projects[project].title).replace("%link%", projects.projects[project].demoLink);
-            var formattedProjectDates = HTMLprojectDates.replace("%data%",
-                projects.projects[project].dates);
-            var formattedProjectDescription = HTMLprojectDescription.replace("%data%",
-                projects.projects[project].description);
+projects.display = function() {
+    for (var project of projects.projects) {
+        var images = "";
 
-            $(".project-entry:last").append(formattedProjectTitle);
-            $(".project-entry:last").append(formattedProjectDates);
-            $(".project-entry:last").append(formattedProjectDescription);
-
-            if (projects.projects[project].images.length > 0) {
-                for (var image in projects.projects[project].images) {
-                    var formattedProjectImage = HTMLprojectImage.replace("%data%",
-                        projects.projects[project].images[image]).replace("%link%", projects.projects[project].demoLink);
-                    $(".project-entry:last").append(formattedProjectImage);
-                }
-            }
+        for (image of project.images) {
+            images += HTMLprojectImage.replace("%data%", image);
         }
+
+        title = HTMLprojectTitle.replace("%data%", project.title);
+        title = title.replace("%url%", project.url);
+
+        $("#projects").append(HTMLprojectStart);
+        $(".project-entry:last").append(
+            title +
+            HTMLprojectDates.replace("%data%", project.dates) +
+            HTMLprojectDescription.replace("%data%", project.description) +
+            images
+        );
     }
 };
+
 
 
 
@@ -174,7 +173,7 @@ var education = {
         "majors": [
             "Chemistry & Biochemistry"
         ],
-        "dates": 2015,
+        "dates": "March 2015",
         "url": "https://www.washington.edu"
     }, {
         "name": "Bellevue College",
@@ -183,86 +182,63 @@ var education = {
         "majors": [
             "Transfer Degree / Running Start"
         ],
-        "dates": 2009,
+        "dates": "December 2008",
         "url": "http://www.bellevuecollege.edu"
     }],
     "onlineCourses": [{
         "title": "Into to jQuery",
         "school": "Udacity",
-        "date": "September 2016",
+        "dates": "September 2016",
         "url": "www.udacity.com/course/intro-to-jquery--ud245"
     }, {
         "title": "JavaScript Basics",
         "school": "Udacity",
-        "date": "September 2016",
+        "dates": "September 2016",
         "url": "https://www.udacity.com/course/javascript-basics--ud804"
     }, {
         "title": "Responsive Images",
         "school": "Udacity",
-        "date": "September 2016",
+        "dates": "September 2016",
         "url": "https://www.udacity.com/course/responsive-images--ud882"
     }, {
         "title": "Responsive Web Design Fundamentals",
         "school": "Udacity",
-        "date": "September 2016",
+        "dates": "September 2016",
         "url": "https://www.udacity.com/course/responsive-web-design-fundamentals--ud893"
     }, {
         "title": "How to Use Git and GitHub",
         "school": "Udacity",
-        "date": "September 2015",
+        "dates": "September 2015",
         "url": "https://www.udacity.com/course/viewer#!/c-ud775-nd"
-    }],
-    display: function() {
-        for (var school in education.schools) {
-            var formattedSchoolName = HTMLschoolName.replace("%data%",
-                education.schools[school].name);
-            // add school URL to formattedSchoolName.  URL opens in a new browser window.
-            formattedSchoolName = formattedSchoolName.replace("#",
-                education.schools[school].url + "\"" + " target=\"_blank\"");
-            var formattedSchoolDegree = HTMLschoolDegree.replace("%data%",
-                education.schools[school].degree);
-            var formattedSchoolDates = HTMLschoolDates.replace("%data%",
-                education.schools[school].dates);
-            var formattedSchoolLocation = HTMLschoolLocation.replace("%data%",
-                education.schools[school].location);
-            // A loop isn't needed since each majors array in the JSON only has one element
-            var formattedSchoolMajor = HTMLschoolMajor.replace("%data%",
-                education.schools[school].majors[0]);
+    }]};
 
-            $("#education").append(HTMLschoolStart);
-            $(".education-entry:last").append(formattedSchoolName + formattedSchoolDegree);
-            $(".education-entry:last").append(formattedSchoolDates);
-            $(".education-entry:last").append(formattedSchoolLocation);
-            $(".education-entry:last").append(formattedSchoolMajor);
-        }
+education.display = function() {
+    for (var school of education.schools) {
+        $("#education").append(HTMLschoolStart + "<br>");
+        $(".education-entry:last").append(
+            HTMLschoolName.replace("%data%", school.name) +
+            HTMLschoolDegree.replace("%data%", school.degree) +
+            HTMLschoolDates.replace("%data%", school.dates) +
+            HTMLschoolMajor.replace("%data%", school.majors) +
+            HTMLschoolLocation.replace("%data%", school.location)
+        );
+    }
 
-        // I added a <br> before the Online Courses header so there is more space between
-        // the Education and Online Course sections
-        $("#education").append("<br>" + HTMLonlineClasses);
+    $("#education").append("<br>" + HTMLonlineClasses);
 
-        for (var onlineCourse in education.onlineCourses) {
-            var formattedOnlineTitle = HTMLonlineTitle.replace("%data%",
-                education.onlineCourses[onlineCourse].title);
-            // add school URL to formattedSchoolName.  URL opens in a new browser window.
-            formattedOnlineTitle = formattedOnlineTitle.replace("#",
-                education.onlineCourses[onlineCourse].url + "\"" + " target=\"_blank\"");
-            var formattedOnlineSchool = HTMLonlineSchool.replace("%data%",
-                education.onlineCourses[onlineCourse].school);
-            var formattedOnlineDates = HTMLonlineDates.replace("%data%",
-                education.onlineCourses[onlineCourse].date);
+    for (var course of education.onlineCourses) {
+        $("#education").append(HTMLschoolStart  + "<br>");
 
-            // HTMLonlineURL is not displayed since URL is reachable via the Title/School tag.
-            // I thought this was a cleaner-looking implementation than displaying the
-            // URL separately.
-            $("#education").append(HTMLschoolStart);
-            $(".education-entry:last").append(formattedOnlineTitle + formattedOnlineSchool);
-            // I added a <br> formattedOnlineDates to give a little space between
-            // each online course entry.
-            $(".education-entry:last").append(formattedOnlineDates + "<br>");
-        }
+        var title = HTMLonlineTitle.replace("%data%", course.title);
+        title = title.replace("%url%", course.url);
+
+        $(".education-entry:last").append(
+            title +
+            HTMLonlineSchool.replace("%data%", course.school) +
+            HTMLonlineDates.replace("%data%", course.dates)
+        );
     }
 };
-
 
 
 
@@ -298,31 +274,23 @@ var work = {
 			"dates": "April 2012 - June 2013",
 			"description": "This is another position where I was quickly promoted from Server to Manager. It was a very fast paced business, because of it's location next to Pike Place Market, which gets thousands of tourists each day during the summer. The fast paced nature of the business resulted in a high turnover rate, around 6 months on average. During my time as a manager, I managed to increase retention by nearly 100%, as the average turnover rate went up to nearly 12 months. I attribute this to both my excellent work ethic and easy-going personality.",
             "url": "www.steelheaddiner.com"
-		}],
-    display: function() {
-
-        for (var job in work.jobs) {
-            var formattedEmployer = HTMLworkEmployer.replace("%data%", work.jobs[job].employer);
-            // add work URL to formattedEmployer.  URL opens in a new browser window.
-            formattedEmployer = formattedEmployer.replace("#", work.jobs[job].url + "\"" + " target=\"_blank\"");
-            var formattedTitle = HTMLworkTitle.replace("%data%", work.jobs[job].title);
-            var formattedEmployerTitle = formattedEmployer + formattedTitle;
+		}]};
 
 
-            var formattedWorkLocation = HTMLworkLocation.replace("%data%",
-                work.jobs[job].location);
-            var formattedWorkDates = HTMLworkDates.replace("%data%", work.jobs[job].dates);
-            var formattedWorkDescription = HTMLworkDescription.replace("%data%",
-                work.jobs[job].description);
+work.display = function() {
+    for (var job of work.jobs) {
+        $("#workExperience").append(HTMLworkStart);
+        var employer = HTMLworkEmployer.replace("%data%", job.employer);
+        employer = employer.replace("%url%", job.url);
+        var title = HTMLworkTitle.replace("%data%", job.title);
+        var dates = HTMLworkDates.replace("%data%", job.dates);
+        var workLocation = HTMLworkLocation.replace("%data%", job.location);
+        var description = HTMLworkDescription.replace("%data%", job.description);
 
-            $("#workExperience").append(HTMLworkStart);
-            $(".work-entry:last").append(formattedEmployerTitle);
-            $(".work-entry:last").append(formattedWorkLocation);
-            $(".work-entry:last").append(formattedWorkDates);
-            $(".work-entry:last").append(formattedWorkDescription);
-        }
+        $(".work-entry:last").append(employer + title + dates + workLocation + description);
     }
 };
+
 bio.display();
 projects.display();
 education.display();
