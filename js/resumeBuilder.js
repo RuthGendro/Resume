@@ -109,9 +109,9 @@ var bio = {
         $("#resume-links").append(formattedPDFResumeLink);
         $("#resume-links").append(formattedWordResumeLink);
 
-        // Show interactive map
-        $("#locations").append('<div id="mapDiv"></div>');
-        $("#mapDiv").append(googleMap);
+//        // Show interactive map
+//        $("#locations").append('<div id="mapDiv"></div>');
+//        $("#mapDiv").append(googleMap);
     }
 };
 
@@ -230,7 +230,7 @@ education.display = function() {
         $("#education").append(HTMLschoolStart  + "<br>");
 
         var title = HTMLonlineTitle.replace("%data%", course.title);
-        title = title.replace("%url%", course.url);
+        title = title.replace("#", course.url + "\"" + " target=\"_blank\"");
 
         $(".education-entry:last").append(
             title +
@@ -239,8 +239,6 @@ education.display = function() {
         );
     }
 };
-
-
 
 var work = {
     "jobs": [{
