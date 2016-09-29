@@ -150,7 +150,7 @@ projects.display = function() {
         }
 
         title = HTMLprojectTitle.replace("%data%", project.title);
-        title = title.replace("%url%", project.url);
+        title = title.replace("%link%", project.url);
 
         $("#projects").append(HTMLprojectStart);
         $(".project-entry:last").append(
@@ -216,7 +216,7 @@ education.display = function() {
     for (var school of education.schools) {
         $("#education").append(HTMLschoolStart + "<br>");
         $(".education-entry:last").append(
-            HTMLschoolName.replace("%data%", school.name) +
+            HTMLschoolName.replace("%data%", school.name).replace("#", school.url) +
             HTMLschoolDegree.replace("%data%", school.degree) +
             HTMLschoolDates.replace("%data%", school.dates) +
             HTMLschoolMajor.replace("%data%", school.majors) +
@@ -229,8 +229,7 @@ education.display = function() {
     for (var course of education.onlineCourses) {
         $("#education").append(HTMLschoolStart  + "<br>");
 
-        var title = HTMLonlineTitle.replace("%data%", course.title);
-        title = title.replace("#", course.url + "\"" + " target=\"_blank\"");
+        title = HTMLonlineTitle.replace("%data%", course.title).replace("#", course.url);
 
         $(".education-entry:last").append(
             title +
@@ -239,6 +238,8 @@ education.display = function() {
         );
     }
 };
+
+
 
 var work = {
     "jobs": [{
