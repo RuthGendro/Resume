@@ -119,15 +119,14 @@ var bio = {
 
 var projects = {
     "projects": [
-// In Progress
-//		{
-//			"title": "Wild Wings Studio",
-//			"dates": "September - October 2016",
-//			"description": "Website for local taxidermy business",
-//			"images": ["#"],
-//			"url": "http://wildwingsstudio.com",
-//          "demoLink": "http://wildwingsstudio.com"
-//		},
+		{
+			"title": "Wild Wings Studio",
+			"dates": "September - October 2016",
+			"description": "Website for small local business",
+			"images": ["images/WWS.jpg"],
+			"url": "https://ruthgendro.github.io/WingsWildlifeStudio/",
+          "demoLink": "Wings Wilflife Studio"
+		},
 		{
 			"title": "Online Portfolio",
 			"dates": "September 2016",
@@ -135,7 +134,7 @@ var projects = {
 			"Nanodegree.",
 			"images": ["images/portfolio.jpg"],
 			"url": "https://ruthgendro.github.io/index.html",
-            "demoLink": "https://ruthgendro.github.io/index.html"
+            "demoLink": "https://ruthgendro.github.io"
 		}
 	]
 };
@@ -189,7 +188,7 @@ var education = {
         "title": "Into to jQuery",
         "school": "Udacity",
         "dates": "September 2016",
-        "url": "www.udacity.com/course/intro-to-jquery--ud245"
+        "url": "https://www.udacity.com/course/intro-to-jquery--ud245"
     }, {
         "title": "JavaScript Basics",
         "school": "Udacity",
@@ -209,7 +208,7 @@ var education = {
         "title": "How to Use Git and GitHub",
         "school": "Udacity",
         "dates": "September 2015",
-        "url": "https://www.udacity.com/course/viewer#!/c-ud775-nd"
+        "url": "https://www.udacity.com/course/how-to-use-git-and-github--ud775"
     }]};
 
 education.display = function() {
