@@ -10,12 +10,12 @@ Udacity provided all of the files with some of the code pre-completed. Ruth Gend
 
 The online resume is to be used and viewed similarly to traditional resumes. The sections on the resume consist of the following:
 
-Contact information
-Message, which includes the resume's summary statement
-Skills, which includes various programming languages, frameworks, libraries
-Work experience
-Projects completed to date, including pics
-Education, including online courses
-Contact information (again)
+*Contact information
+*Message, which includes the resume's summary statement
+*Skills, which includes various programming languages, frameworks, libraries
+*Work experience
+*Projects completed to date, including pics
+*Education, including online courses
+*Contact information (again)
 
 
