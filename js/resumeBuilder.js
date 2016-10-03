@@ -6,8 +6,8 @@ var bio = {
     "biopic": "images/me.jpg",
     "name": "Ruth Gendro",
     "role": "Web Developer",
-    "welcomeMessage": "Having spent about a year learning web development, I am confident in my ability to progessively learn more",
-    "welcomeMessage2": "Eager to expand my skill set and continue learning",
+    "welcomeMessage": "Front end developer passionate about creating responsive, and visually pleasing websites",
+    "welcomeMessage2": "Enjoys making clean and semantic code",
     "contacts": {
         "mobile": "425-894-5116",
         "mobileLink": "tel:425-894-5116",
@@ -25,8 +25,8 @@ var bio = {
     "skills": ["JavaScript", "HTML", "CSS", "PHP (beginner-level)", "Ruby (beginner)"],
     "frameworks_libraries": ["Angular JS", "Bootstrap / Responsive Design", "jQuery", "Jasmine"],
     "other_tools": ["Chrome DevTools", "Git", "GitHub", "PhotoShop", "Grunt (learning)", "Gulp (learning)"],
-    "pdfResumeURL": "", // add google drive doc
-    "wordResumeURL": "", // add google drive doc
+    "pdfResumeURL": "https://drive.google.com/file/d/0B4qaE2gnm9IXZFBUc2VBVm5qUEU/view?ths=true",
+    "wordResumeURL": "https://docs.google.com/document/d/1T7e1ViOVJ6AP5D74S0inQtKvKJRm0yA4jznkBV3CE4w/edit",
 
     display: function() {
 

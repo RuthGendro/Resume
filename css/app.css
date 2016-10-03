@@ -200,7 +200,7 @@ ul {
 .welcome-bullet {
     color: #fff;
     font-size: 16px;
-    list-style-type: disc;
+    list-style-type: circle;
     list-style-position: inside;
     text-indent: -1em;
     margin-left: 15px;
