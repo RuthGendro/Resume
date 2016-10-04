@@ -18,7 +18,7 @@ var bio = {
         "portfolio": "ruthgendro.github.io",
         "portfolioURL": "https://ruthgendro.github.io/",
         "linkedin": "ruthgendro",
-        "linkedinURL": "https://www.linkedin.com/in/ruth-gendro-7869b2101",
+        "linkedinURL": "https://www.linkedin.com/in/ruthgendro",
         "location": "Seattle, WA",
         "locationURL": "https://www.google.com/maps/place/Seattle,+WA/@47.6149943,-122.4759913,11z/data=!3m1!4b1!4m5!3m4!1s0x5490102c93e83355:0x102565466944d59a!8m2!3d47.6062095!4d-122.3320708"
     },
@@ -246,7 +246,7 @@ var work = {
 			"title": "Lead / Event Coordinator",
 			"location": "Carnation, WA, US",
 			"dates": "April 2016 - Present",
-			"description": "I was hired as a server in the restaurant initially, and quickly promoted into a position with more responsibility. One of the reasons for the quick promotion is because I am highly productive, and an efficent team contributor. As a lead for the employees in the front of house, I help to ensure that all aspects of the business are running smoothly, and I step wherever needed. I also handle the event coordination, which includes weddings, reunions, and tournaments, and it requires good attention to detail to ensure a smooth event.",
+			"description": "<ul class='experienceBullets'><li>Plan event such as weddings, reunions, and tournaments for up to 300 people, paying attention to details such as menu, decorative arrangements, and overall room layout. </li><li>Train and mentor employees while striving to give customers the best experience possible.</li><li>Foster a positive team environment by contributing to multiple departments.</li></ul>",
             "url": "#"
 		},
         {
@@ -254,7 +254,7 @@ var work = {
 			"title": "UI Developer Intern",
 			"location": "Redmond, WA, US",
 			"dates": "September 2015 - March 2016",
-			"description": "I interned with this startup to obtain some experience and mentoring while I was in the beginning stages of coding. During the internship, I helped to develop some HTML/CSS templates, as well as work on TDD and version control. With TDD, I experimented with Jasmine and Karma, and I used BitBucket for version control. I also had an opportunity to begin working with AngularJS.",
+			"description": "<ul class='experienceBullets'><li>Developed consumer web application interfaces utilizing HTML, CSS, and AngularJS.</li><li>Built interfaces with responsive web design and UI in mind.</li><li>Developed front-end unit tests using Jasmine and Karma</li></ul>",
             "url": "#"
 		},
 		{
@@ -262,7 +262,7 @@ var work = {
 			"title": "Server",
 			"location": "Redmond, WA, US",
 			"dates": "June 2013 - April 2016",
-			"description": "While not the most relevant job to being a web developer, working in the restaurant industry taught me more abstract skills, including how to work well with all sorts of personality types. It really helped me cultivate my multi-tasking skills and organization skills, as well as taught me how to be a good teammate, and how to work well independently. I also had to deal with stressful situations frequently, so I know how to effectively deal with that sort of pressure. I wore many different hats, while working here because it was a very small business, so even though I was 'just' a server, I was responsible for a lot of day to day operations.",
+			"description": "<ul class='experienceBullets'><li>Created great customer experiences, and listened closely to feedback.</li><li>Effectively worked alone, and completed tasks that a bigger business would have hired up to 7 people for (e.g., bartender, server, manager, expeditor, etc.)</li></ul>",
             "url": "#"
 		},
 		{
@@ -270,7 +270,7 @@ var work = {
 			"title": "Manager",
 			"location": "Seattle, WA, US",
 			"dates": "April 2012 - June 2013",
-			"description": "This is another position where I was quickly promoted from Server to Manager. It was a very fast paced business, because of it's location next to Pike Place Market, which gets thousands of tourists each day during the summer. The fast paced nature of the business resulted in a high turnover rate, around 6 months on average. During my time as a manager, I managed to increase retention by nearly 100%, as the average turnover rate went up to nearly 12 months. I attribute this to both my excellent work ethic and easy-going personality.",
+			"description": "<ul class='experienceBullets'><li>Trained across multiple positions, to be available as backup in case of emergency. </li><li>Worked with different teammate on a daily basis, as we worked in pairs during a shift, and both teammates had to communicate and work together effectively.</li></ul>",
             "url": "www.steelheaddiner.com"
 		}]};
 
