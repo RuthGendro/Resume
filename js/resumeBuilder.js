@@ -7,7 +7,7 @@ var bio = {
     "name": "Ruth Gendro",
     "role": "Web Developer",
     "welcomeMessage": "Front end developer passionate about creating responsive, and visually pleasing websites",
-    "welcomeMessage2": "Enjoys making clean and semantic code",
+    "welcomeMessage2": "'The separation of talent and skill is one of the greatest misunderstood concepts for people who are trying to excel, who have dreams, who want to do things. Talent you have naturally. Skill is only developed by hours and hours and hours of beating on your craft.' - Will Smith",
     "contacts": {
         "mobile": "425-894-5116",
         "mobileLink": "tel:425-894-5116",
