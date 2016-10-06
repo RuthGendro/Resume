@@ -123,7 +123,7 @@ var projects = {
 			"title": "Wild Wings Studio",
 			"dates": "September - October 2016",
 			"description": "Website for small local business",
-			"images": ["images/WWS.jpg"],
+			"images": ["images/smallWWS.jpg"],
 			"url": "https://ruthgendro.github.io/WingsWildlifeStudio/",
           "demoLink": "Wings Wilflife Studio"
 		},
