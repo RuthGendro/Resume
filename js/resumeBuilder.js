@@ -130,9 +130,8 @@ var projects = {
 		{
 			"title": "Online Portfolio",
 			"dates": "September 2016",
-			"description": "Created an online portfolio of work as part of Udacity's Front-End Web Developer " +
-			"Nanodegree.",
-			"images": ["images/portfolio.jpg"],
+			"description": "Created an online portfolio of work",
+			"images": ["images/portfolioHomepage.png"],
 			"url": "https://ruthgendro.github.io/index.html",
             "demoLink": "https://ruthgendro.github.io"
 		}
@@ -185,6 +184,16 @@ var education = {
         "url": "http://www.bellevuecollege.edu"
     }],
     "onlineCourses": [{
+        "title": "HTML5 Canvas",
+        "school": "Udacity",
+        "dates": "October 2016",
+        "url": "https://www.udacity.com/course/html5-canvas--ud292"
+    },{
+        "title": "Object Oriented JavaScript",
+        "school": "Udacity",
+        "dates": "October 2016",
+        "url": "https://www.udacity.com/course/object-oriented-javascript--ud015"
+    },{
         "title": "Into to jQuery",
         "school": "Udacity",
         "dates": "September 2016",
