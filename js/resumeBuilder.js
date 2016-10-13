@@ -184,6 +184,16 @@ var education = {
         "url": "http://www.bellevuecollege.edu"
     }],
     "onlineCourses": [{
+        "title": "Browser Rendering Optimization",
+        "school": "Udacity",
+        "dates": "October 2016",
+        "url": "https://www.udacity.com/course/browser-rendering-optimization--ud860"
+    },{
+        "title": "Website Performance Optimization",
+        "school": "Udacity",
+        "dates": "October 2016",
+        "url": "https://www.udacity.com/course/website-performance-optimization--ud884"
+    },{
         "title": "HTML5 Canvas",
         "school": "Udacity",
         "dates": "October 2016",
