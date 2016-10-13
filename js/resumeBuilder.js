@@ -162,6 +162,56 @@ projects.display = function() {
 
 
 
+var work = {
+    "jobs": [{
+			"employer": "Blue Heron Golf Course",
+			"title": "Lead / Event Coordinator",
+			"location": "Carnation, WA, US",
+			"dates": "April 2016 - Present",
+			"description": "<ul class='experienceBullets'><li>Plan event such as weddings, reunions, and tournaments for up to 300 people, paying attention to details such as menu, decorative arrangements, and overall room layout. </li><li>Train and mentor employees while striving to give customers the best experience possible.</li><li>Foster a positive team environment by contributing to multiple departments.</li></ul>",
+            "url": "#"
+		},
+        {
+			"employer": "6igma Health",
+			"title": "UI Developer Intern",
+			"location": "Redmond, WA, US",
+			"dates": "September 2015 - March 2016",
+			"description": "<ul class='experienceBullets'><li>Developed consumer web application interfaces utilizing HTML, CSS, and AngularJS.</li><li>Built interfaces with responsive web design and UI in mind.</li><li>Developed front-end unit tests using Jasmine and Karma</li></ul>",
+            "url": "#"
+		},
+		{
+			"employer": "Hugo's",
+			"title": "Server",
+			"location": "Redmond, WA, US",
+			"dates": "June 2013 - April 2016",
+			"description": "<ul class='experienceBullets'><li>Created great customer experiences, and listened closely to feedback.</li><li>Effectively worked alone, and completed tasks that a bigger business would have hired up to 7 people for (e.g., bartender, server, manager, expeditor, etc.)</li></ul>",
+            "url": "#"
+		},
+		{
+			"employer": "Steelhead Diner",
+			"title": "Manager",
+			"location": "Seattle, WA, US",
+			"dates": "April 2012 - June 2013",
+			"description": "<ul class='experienceBullets'><li>Trained across multiple positions, to be available as backup in case of emergency. </li><li>Worked with different teammate on a daily basis, as we worked in pairs during a shift, and both teammates had to communicate and work together effectively.</li></ul>",
+            "url": "www.steelheaddiner.com"
+		}]};
+
+
+work.display = function() {
+    for (var job of work.jobs) {
+        $("#workExperience").append(HTMLworkStart);
+        var employer = HTMLworkEmployer.replace("%data%", job.employer);
+        employer = employer.replace("%url%", job.url);
+        var title = HTMLworkTitle.replace("%data%", job.title);
+        var dates = HTMLworkDates.replace("%data%", job.dates);
+        var workLocation = HTMLworkLocation.replace("%data%", job.location);
+        var description = HTMLworkDescription.replace("%data%", job.description);
+
+        $(".work-entry:last").append(employer + title + dates + workLocation + description);
+    }
+};
+
+
 
 var education = {
     "schools": [{
@@ -258,57 +308,7 @@ education.display = function() {
 };
 
 
-
-var work = {
-    "jobs": [{
-			"employer": "Blue Heron Golf Course",
-			"title": "Lead / Event Coordinator",
-			"location": "Carnation, WA, US",
-			"dates": "April 2016 - Present",
-			"description": "<ul class='experienceBullets'><li>Plan event such as weddings, reunions, and tournaments for up to 300 people, paying attention to details such as menu, decorative arrangements, and overall room layout. </li><li>Train and mentor employees while striving to give customers the best experience possible.</li><li>Foster a positive team environment by contributing to multiple departments.</li></ul>",
-            "url": "#"
-		},
-        {
-			"employer": "6igma Health",
-			"title": "UI Developer Intern",
-			"location": "Redmond, WA, US",
-			"dates": "September 2015 - March 2016",
-			"description": "<ul class='experienceBullets'><li>Developed consumer web application interfaces utilizing HTML, CSS, and AngularJS.</li><li>Built interfaces with responsive web design and UI in mind.</li><li>Developed front-end unit tests using Jasmine and Karma</li></ul>",
-            "url": "#"
-		},
-		{
-			"employer": "Hugo's",
-			"title": "Server",
-			"location": "Redmond, WA, US",
-			"dates": "June 2013 - April 2016",
-			"description": "<ul class='experienceBullets'><li>Created great customer experiences, and listened closely to feedback.</li><li>Effectively worked alone, and completed tasks that a bigger business would have hired up to 7 people for (e.g., bartender, server, manager, expeditor, etc.)</li></ul>",
-            "url": "#"
-		},
-		{
-			"employer": "Steelhead Diner",
-			"title": "Manager",
-			"location": "Seattle, WA, US",
-			"dates": "April 2012 - June 2013",
-			"description": "<ul class='experienceBullets'><li>Trained across multiple positions, to be available as backup in case of emergency. </li><li>Worked with different teammate on a daily basis, as we worked in pairs during a shift, and both teammates had to communicate and work together effectively.</li></ul>",
-            "url": "www.steelheaddiner.com"
-		}]};
-
-
-work.display = function() {
-    for (var job of work.jobs) {
-        $("#workExperience").append(HTMLworkStart);
-        var employer = HTMLworkEmployer.replace("%data%", job.employer);
-        employer = employer.replace("%url%", job.url);
-        var title = HTMLworkTitle.replace("%data%", job.title);
-        var dates = HTMLworkDates.replace("%data%", job.dates);
-        var workLocation = HTMLworkLocation.replace("%data%", job.location);
-        var description = HTMLworkDescription.replace("%data%", job.description);
-
-        $(".work-entry:last").append(employer + title + dates + workLocation + description);
-    }
-};
-
 bio.display();
 projects.display();
-education.display();
 work.display();
+education.display();
