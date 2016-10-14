@@ -26,7 +26,7 @@ var bio = {
     "frameworks_libraries": ["Angular JS", "Bootstrap / Responsive Design", "jQuery", "Jasmine"],
     "other_tools": ["Chrome DevTools", "Git", "GitHub", "PhotoShop", "Grunt (learning)", "Gulp (learning)"],
     "pdfResumeURL": "https://drive.google.com/file/d/0B4qaE2gnm9IXZFBUc2VBVm5qUEU/view?ths=true",
-    "wordResumeURL": "https://docs.google.com/document/d/1T7e1ViOVJ6AP5D74S0inQtKvKJRm0yA4jznkBV3CE4w/edit",
+    "wordResumeURL": "https://docs.google.com/document/d/1T7e1ViOVJ6AP5D74S0inQtKvKJRm0yA4jznkBV3CE4w/edit?usp=sharing",
 
     display: function() {
 
