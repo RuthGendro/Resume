@@ -164,11 +164,18 @@ projects.display = function() {
 
 var work = {
     "jobs": [{
+			"employer": "Freelancer",
+			"title": "Front End Web Development",
+			"location": "Carnation, WA, US",
+			"dates": "September 2016 - Present",
+			"description": "<ul class='experienceBullets'><li>Create custom websites and web applications that are performance optimized, responsive (mobile friendly), and search engine optimized.</li><li>Utilize HTML, CSS, JS, jQuery, Bootstrap, and occasionally additional libraries/frameworks, including AngularJS, to create user friendly experiences.</li><li>Dedicated to creating your pixel perfect website!</li></ul>",
+            "url": "#"
+		},{
 			"employer": "Blue Heron Golf Course",
 			"title": "Lead / Event Coordinator",
 			"location": "Carnation, WA, US",
 			"dates": "April 2016 - Present",
-			"description": "<ul class='experienceBullets'><li>Plan event such as weddings, reunions, and tournaments for up to 300 people, paying attention to details such as menu, decorative arrangements, and overall room layout. </li><li>Train and mentor employees while striving to give customers the best experience possible.</li><li>Foster a positive team environment by contributing to multiple departments.</li></ul>",
+			"description": "<ul class='experienceBullets'><li>Plan and coordinate events for up to 200 people, paying attention to details about menu, decor, room layout, and other special requests.</li><li>Contributes to team effort by being cross-trained, and working in different positions depending on need.</li><li>Train new employees and bring them up to company standards.</li><li>Oversee the servers during shifts, and communicate with all employees to make sure everyone is working together to take care of all customers.</li></ul>",
             "url": "#"
 		},
         {
@@ -192,7 +199,7 @@ var work = {
 			"title": "Manager",
 			"location": "Seattle, WA, US",
 			"dates": "April 2012 - June 2013",
-			"description": "<ul class='experienceBullets'><li>Trained across multiple positions, to be available as backup in case of emergency. </li><li>Worked with different teammate on a daily basis, as we worked in pairs during a shift, and both teammates had to communicate and work together effectively.</li></ul>",
+			"description": "<ul class='experienceBullets'><li>Prepped staff in a daily pre-shift meeting, working with the chef to talk about specials and events going on that day.</li><li>Provided highly personalized guest oriented dining experience.</li><li>Worked with different teammate on a daily basis, as we worked in pairs during a shift, and both teammates had to communicate and work together effectively.</li><li>Trained across multiple positions, serving as back-up for FOH staff as needed.</li></ul>",
             "url": "www.steelheaddiner.com"
 		}]};
 
